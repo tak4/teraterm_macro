@@ -1,6 +1,6 @@
 ;ログイン情報
-USERNAME = 'takashi'
-PASSWORD = 'lindbergh'
+USERNAME = 'user'
+PASSWORD = 'password'
 HOSTADDR = '172.17.71.90'
 
 ;ログインコマンド生成
