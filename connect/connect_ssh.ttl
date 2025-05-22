@@ -1,0 +1,31 @@
+;ログイン情報
+USERNAME = 'takashi'
+PASSWORD = 'lindbergh'
+HOSTADDR = '172.17.71.90'
+
+;ログインコマンド生成
+COMMAND = HOSTADDR
+strconcat COMMAND ' /ssh /auth=password /user='
+strconcat COMMAND USERNAME
+strconcat COMMAND ' /passwd='
+strconcat COMMAND PASSWORD
+
+;ログイン
+connect COMMAND
+
+getdir macro_dir
+; messagebox macro_dir 'debug'
+
+;ログフォルダ格納先を指定
+log_dir = ''
+strconcat log_dir macro_dir
+strconcat log_dir '\log'
+messagebox log_dir 'debug'
+changedir log_dir
+
+;ログ記録開始
+logopen 'test.log' 0 0
+
+;ログ記録終了
+; logclose
+
